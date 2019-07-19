@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext } from 'react';
 import Article1 from './Article1';
 import Article2 from "./Article2";
 import Article3 from './Article3';
