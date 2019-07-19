@@ -1,8 +1,21 @@
-import React, { useState, createContext } from 'react';
+import React, { useState, createContext, useEffect } from 'react';
 
 export const ArticleContext = createContext()
 
 export const ArticleProvider = (props) => {
+  // useEffect(() => {
+  //   fetchData();
+  // }, [])
+
+  // const [articleData, setArticleData] = useState([]);
+
+  // const fetchData = async () => {
+  //   const res = await fetch('https://api.github.com/repos/bbc/news-coding-test-dataset/contents/data/article-1.json');
+  //   const data  = await res.json();
+  //   // const data = article1data;
+  //   setArticleData(data);
+  // }
+
   const [articles, setArticles] = useState([
     {
       title: 'Article 1',
