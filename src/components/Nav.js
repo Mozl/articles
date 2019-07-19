@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { Link, BrowserRouter as Router } from 'react-router-dom';
 
 const Wrapper = styled.nav`
   width: 100%;
@@ -17,23 +17,25 @@ const NavLink = styled.li`
 const Nav = () => {
   return(
     <Fragment>
+      <Router>
       <Wrapper>
         <Link to="/">
-          <NavLink>Home</NavLink>
+          <NavLink tabIndex="1">Home</NavLink>
         </Link>
         <Link to="/article2">
-          <NavLink>Article 2</NavLink>
+          <NavLink tabIndex="2">Article 2</NavLink>
         </Link>
         <Link to="/article3">
-          <NavLink>Article 3</NavLink>
+          <NavLink tabIndex="3">Article 3</NavLink>
         </Link>
         <Link to="/article4">
-          <NavLink>Article 4</NavLink>
+          <NavLink tabIndex="4">Article 4</NavLink>
         </Link>
         <Link to="/article5">
-          <NavLink>Article 5</NavLink>
+          <NavLink tabIndex="5">Article 5</NavLink>
         </Link>
       </Wrapper>
+      </Router>
     </Fragment>
   )
 }

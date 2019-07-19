@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import styled from 'styled-components';
+import { ArticleContext } from '../contexts/ArticleContext';
 
 const SubmitButton = styled.input`
   cursor: pointer;
@@ -38,6 +39,7 @@ const useInput = initialValue => {
 };
 
 const Ranking = () => {
+  const [articles] = useContext(ArticleContext);
   const { value:first, bind:bindFirst, reset:resetFirst } = useInput('');
   const { value:second, bind:bindSecond, reset:resetSecond } = useInput('');
   const { value:third, bind:bindThird, reset:resetThird } = useInput('');
@@ -78,27 +80,27 @@ const Ranking = () => {
   return(
     <div>
       <h1>Rank the articles</h1>
-      <form onSubmit={handleSubmit}>
+      <form aria-label="ranking-form" id="ranking-form" onSubmit={handleSubmit}>
       <InputWrapper>
-        <label>
+        <label id="article-1">
           Article 1 (1-5):
-          <input type="text" {...bindFirst} />
+          <input type="text" {...bindFirst} aria-labelledby="ranking-form article-1"/>
         </label>
-        <label>
+        <label id="article-2">
           Article 2 (1-5):
-          <input type="text" {...bindSecond} />
+          <input type="text" {...bindSecond} aria-labelledby="ranking-form article-2"/>
         </label>
-        <label>
+        <label id="article-3">
           Article 3 (1-5):
-          <input type="text" {...bindThird} />
+          <input type="text" {...bindThird} aria-labelledby="ranking-form article-3"/>
         </label>
-        <label>
+        <label id="article-4">
           Article 4 (1-5):
-          <input type="text" {...bindFourth} />
+          <input type="text" {...bindFourth} aria-labelledby="ranking-form article-4"/>
         </label>
-        <label>
+        <label id="article-5">
           Article 5 (1-5):
-          <input type="text" {...bindFifth} />
+          <input type="text" {...bindFifth} aria-labelledby="ranking-form article-5"/>
         </label>
       </InputWrapper>  
       <SubmitButton type="submit" value="Submit" />
