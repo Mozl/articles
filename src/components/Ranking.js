@@ -85,28 +85,28 @@ const Ranking = () => {
       <h1 className="ranking-heading" aria-label="ranking-heading">Rank the articles</h1>
       <form aria-label="ranking-form" id="ranking-form" onSubmit={handleSubmit}>
         <InputWrapper className="input-wrapper">
-          <label id="article-1">
+          <label>
             Article 1 (1-5):
-            <input type="text" {...bindFirst} aria-labelledby="ranking-form article-1"/>
+            <input id="article-1" type="text" {...bindFirst} aria-labelledby="ranking-form article-1"/>
           </label>
-          <label id="article-2">
+          <label>
             Article 2 (1-5):
-            <input type="text" {...bindSecond} aria-labelledby="ranking-form article-2"/>
+            <input id="article-2" type="text" {...bindSecond} aria-labelledby="ranking-form article-2"/>
           </label>
-          <label id="article-3">
+          <label>
             Article 3 (1-5):
-            <input type="text" {...bindThird} aria-labelledby="ranking-form article-3"/>
+            <input id="article-3" type="text" {...bindThird} aria-labelledby="ranking-form article-3"/>
           </label>
-          <label id="article-4">
+          <label>
             Article 4 (1-5):
-            <input type="text" {...bindFourth} aria-labelledby="ranking-form article-4"/>
+            <input id="article-4" type="text" {...bindFourth} aria-labelledby="ranking-form article-4"/>
           </label>
-          <label id="article-5">
+          <label>
             Article 5 (1-5):
-            <input type="text" {...bindFifth} aria-labelledby="ranking-form article-5"/>
+            <input id="article-5" type="text" {...bindFifth} aria-labelledby="ranking-form article-5"/>
           </label>
         </InputWrapper>
-      <SubmitButton type="submit" value="Submit" />
+      <SubmitButton type="submit" value="Submit" id="submit-button" aria-label="submit-button" />
       <p className="submit-message"></p>
       </form>
     </div>

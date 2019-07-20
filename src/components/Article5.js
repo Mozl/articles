@@ -23,7 +23,7 @@ const Article5 = ({articleData}) => {
       {body.map((para, key) => (
         <p key={key}>{para.model.text}</p>
       ))}
-      <Link to="/ranking"><span role="img" aria-label="ranking">⭐️</span> Rank Articles</Link>
+      <Link to="/ranking" id="ranking-link"><span role="img" aria-label="ranking">⭐️</span> Rank Articles</Link>
     </div>
   )
 }
