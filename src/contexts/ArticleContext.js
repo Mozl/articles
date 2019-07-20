@@ -1,3 +1,4 @@
+// eslint-disable-next-line
 import React, { useState, createContext, useEffect } from 'react';
 import article1data from "../articleData/article1";
 import article2data from "../articleData/article2";
@@ -17,7 +18,7 @@ export const ArticleProvider = (props) => {
   // const fetchData = async () => {
   //   const res = await fetch('https://api.github.com/repos/bbc/news-coding-test-dataset/contents/data/article-1.json');
   //   const data  = await res.json();
-  //   // const data = article1data;
+  //   const data = article1data;
   //   setArticleData(data);
   // }
 

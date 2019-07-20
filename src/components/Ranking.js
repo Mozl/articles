@@ -65,10 +65,12 @@ const Ranking = () => {
       const dataSent = await res.json();
       setTimeout(() => {
         console.log('Successfully submitted rankings:', JSON.stringify(dataSent));
+        return dataSent;
       }, 200);
     } catch (error) {
       setTimeout(() => {
         console.error('Error in submitting ranking data:', error);
+        return "Failed";
       }, 200);
     }
     resetFirst();
@@ -80,32 +82,33 @@ const Ranking = () => {
 
   return(
     <div>
-      <h1>Rank the articles</h1>
+      <h1 className="ranking-heading" aria-label="ranking-heading">Rank the articles</h1>
       <form aria-label="ranking-form" id="ranking-form" onSubmit={handleSubmit}>
-      <InputWrapper>
-        <label id="article-1">
-          Article 1 (1-5):
-          <input type="text" {...bindFirst} aria-labelledby="ranking-form article-1"/>
-        </label>
-        <label id="article-2">
-          Article 2 (1-5):
-          <input type="text" {...bindSecond} aria-labelledby="ranking-form article-2"/>
-        </label>
-        <label id="article-3">
-          Article 3 (1-5):
-          <input type="text" {...bindThird} aria-labelledby="ranking-form article-3"/>
-        </label>
-        <label id="article-4">
-          Article 4 (1-5):
-          <input type="text" {...bindFourth} aria-labelledby="ranking-form article-4"/>
-        </label>
-        <label id="article-5">
-          Article 5 (1-5):
-          <input type="text" {...bindFifth} aria-labelledby="ranking-form article-5"/>
-        </label>
-      </InputWrapper>  
+        <InputWrapper className="input-wrapper">
+          <label id="article-1">
+            Article 1 (1-5):
+            <input type="text" {...bindFirst} aria-labelledby="ranking-form article-1"/>
+          </label>
+          <label id="article-2">
+            Article 2 (1-5):
+            <input type="text" {...bindSecond} aria-labelledby="ranking-form article-2"/>
+          </label>
+          <label id="article-3">
+            Article 3 (1-5):
+            <input type="text" {...bindThird} aria-labelledby="ranking-form article-3"/>
+          </label>
+          <label id="article-4">
+            Article 4 (1-5):
+            <input type="text" {...bindFourth} aria-labelledby="ranking-form article-4"/>
+          </label>
+          <label id="article-5">
+            Article 5 (1-5):
+            <input type="text" {...bindFifth} aria-labelledby="ranking-form article-5"/>
+          </label>
+        </InputWrapper>
       <SubmitButton type="submit" value="Submit" />
-    </form>
+      <p className="submit-message"></p>
+      </form>
     </div>
   )
 }
