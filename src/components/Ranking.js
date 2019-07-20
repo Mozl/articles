@@ -1,6 +1,5 @@
-import React, { useState, useContext } from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
-import { ArticleContext } from '../contexts/ArticleContext';
 
 const SubmitButton = styled.input`
   cursor: pointer;
@@ -39,7 +38,6 @@ const useInput = initialValue => {
 };
 
 const Ranking = () => {
-  const [articles] = useContext(ArticleContext);
   const { value:first, bind:bindFirst, reset:resetFirst } = useInput('');
   const { value:second, bind:bindSecond, reset:resetSecond } = useInput('');
   const { value:third, bind:bindThird, reset:resetThird } = useInput('');
@@ -57,18 +55,21 @@ const Ranking = () => {
     }
     evt.preventDefault();
     try {
-    const res = await fetch(url, {
-      method: 'POST',
-      body: JSON.stringify(data),
-      headers:{
-        'Content-Type': 'application/json'
-      }
-    })
-    const dataSent = await res.json();
-    
-    console.log('Successfully submitted rankings:', JSON.stringify(dataSent))
+      const res = await fetch(url, {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers:{
+          'Content-Type': 'application/json'
+        }
+      })
+      const dataSent = await res.json();
+      setTimeout(() => {
+        console.log('Successfully submitted rankings:', JSON.stringify(dataSent));
+      }, 200);
     } catch (error) {
-      console.error('Error in submitting ranking data:', error)
+      setTimeout(() => {
+        console.error('Error in submitting ranking data:', error);
+      }, 200);
     }
     resetFirst();
     resetSecond();
