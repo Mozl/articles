@@ -7,7 +7,7 @@ import Article5 from './Article5';
 import Ranking from "./Ranking";
 import { ArticleContext } from '../contexts/ArticleContext';
 import styled from 'styled-components';
-import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 const Wrapper = styled.div`
   margin: 5rem;

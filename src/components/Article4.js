@@ -1,13 +1,22 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const Body = styled.div`
+  text-align: left;
+  margin: 0 5rem 0 5rem;
+`
+
 
 const Article4 = ({articleData}) => {
   const { title, body } = articleData;
   return(
     <div>
       <h1>{title}</h1>
-      {body.map((para, key) => (
-        <p key={key}>{para.model.text}</p>
-      ))}
+      <Body>
+        {body.map((para, key) => (
+          <p key={key}>{para.model.text}</p>
+        ))}
+      </Body>
     </div>
   )
 }

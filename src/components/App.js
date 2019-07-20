@@ -11,6 +11,17 @@ const StyledArticleContainer = styled.div`
 `
 
 const App = () => {
+  const slowConnection = window.setTimeout(() => {
+    alert("the page is taking its sweet time loading");
+  }, 5000);
+
+  window.addEventListener('load', () => {
+      window.clearTimeout(slowConnection);
+  }, false);
+  const offlineWarning = () => {
+    alert("No network connection")
+  }
+  window.addEventListener('offline', offlineWarning);
   return (
     <ArticleProvider>
       <Router>
