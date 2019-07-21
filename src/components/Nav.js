@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import BBC_logo_white from '../images/BBC_logo_white.png'
 
 const Wrapper = styled.nav`
   width: 100%;
@@ -19,7 +20,7 @@ const Nav = () => {
     <Fragment>
       <Wrapper>
         <Link to="/">
-          <NavLink tabIndex="1" id="home-link">Home</NavLink>
+          <img tabIndex="1" id="home-link" src={BBC_logo_white} alt="Home" width="100" height="30" />
         </Link>
         <Link to="/article2">
           <NavLink tabIndex="2" id="article2-link">Article 2</NavLink>
