@@ -1,5 +1,5 @@
 /*eslint-disable */
-describe('My First Test', function() {
+describe('Testing App', function() {
   it('Visits the home page', function() {
     cy.visit('http://localhost:3000')
   })

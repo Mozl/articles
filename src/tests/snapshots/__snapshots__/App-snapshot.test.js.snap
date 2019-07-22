@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="App"
+>
+  <nav
+    className="sc-bdVaJa gSibpX"
+    id="nav"
+  >
+    <a
+      href="/article1"
+      id="link"
+      onClick={[Function]}
+    >
+      <img
+        alt="Article 1"
+        height="30"
+        id="home-link"
+        src="BBC_logo_white.png"
+        tabIndex="1"
+        width="100"
+      />
+    </a>
+    <a
+      href="/article2"
+      id="link"
+      onClick={[Function]}
+    >
+      <li
+        className="sc-bwzfXH czeCUF"
+        id="article2-link"
+        tabIndex="2"
+      >
+        Article 2
+      </li>
+    </a>
+    <a
+      href="/article3"
+      id="link"
+      onClick={[Function]}
+    >
+      <li
+        className="sc-bwzfXH czeCUF"
+        id="article3-link"
+        tabIndex="3"
+      >
+        Article 3
+      </li>
+    </a>
+    <a
+      href="/article4"
+      id="link"
+      onClick={[Function]}
+    >
+      <li
+        className="sc-bwzfXH czeCUF"
+        id="article4-link"
+        tabIndex="4"
+      >
+        Article 4
+      </li>
+    </a>
+    <a
+      href="/article5"
+      id="link"
+      onClick={[Function]}
+    >
+      <li
+        className="sc-bwzfXH czeCUF"
+        id="article5-link"
+        tabIndex="5"
+      >
+        Article 5
+      </li>
+    </a>
+    <a
+      href="/ranking"
+      id="link"
+      onClick={[Function]}
+    >
+      <li
+        className="sc-bwzfXH czeCUF"
+        id="ranking-link"
+        tabIndex="6"
+      >
+        Ranking
+      </li>
+    </a>
+  </nav>
+  <div
+    className="sc-htoDjs jYbOhy"
+  />
+</div>
+`;
