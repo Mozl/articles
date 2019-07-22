@@ -19,7 +19,6 @@ describe('My First Test', function() {
   
   it('Fills out form and submits', function() {
     cy.visit('http://localhost:3000')
-    cy.get('#article5-link').click()
     cy.get('#ranking-link').click()
     cy.url().should('include', '/ranking')
     cy.get('#article-1').type('3')
