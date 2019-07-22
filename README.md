@@ -15,7 +15,7 @@ A React SPA project for showing articles, with a ranking page at the end.
 ## Testing
 
 Run `npm test` to run the unit tests
-Run `./node_modules/.bin/cypress open` to run the integration tests
+Run `npm start && ./node_modules/.bin/cypress open` to run the integration tests
 
 I have written a few simple unit tests using Jest and Enzyme, along with Cypress integration tests. As TDD is very important to me I wanted to approach the task using that methodology. However, given time restraints I started the project and then wrote the tests. You can run the unit test suite by running `npm test` in the terminal and Cypress tests with `./node_modules/.bin/cypress open`.
 
